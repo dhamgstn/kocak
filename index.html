@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAPZ DIGITAL | FEEDBACK</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co.com/mr3vvPMp/eaf33ba1-4544-403b-95c9-b71cc6e97bab.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="https://i.ibb.co.com/mr3vvPMp/eaf33ba1-4544-403b-95c9-b71cc6e97bab.png" alt="Logo" class="nav-logo">
+            <span class="logo-text">RAPZ DIGITAL</span>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">FEEDBACK</a></li>
+            <li><a href="info.html">INFO SELLER</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="graffiti-text">PROOF FEEDBACK</h1>
+        <p class="subtitle">PREMIUM QUALITY SERVICE SINCE 2025</p>
+    </header>
+
+    <main>
+        <div class="gallery" id="gallery">
+            </div>
+    </main>
+
+    <div id="myModal" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
+
+    <script>
+        // Script untuk generate 50 foto secara otomatis
+        const gallery = document.getElementById('gallery');
+        for (let i = 1; i <= 47; i++) {
+            gallery.innerHTML += `
+                <div class="testi-card">
+                    <img src="img/testi${i}.png" alt="Testimoni ${i}" onclick="openModal(this.src)">
+                    <div class="card-overlay">VIEW PROOF</div>
+                </div>
+            `;
+        }
+
+        function openModal(src) {
+            document.getElementById("myModal").style.display = "flex";
+            document.getElementById("imgFull").src = src;
+        }
+    </script>
+
+</body>
+</html>
